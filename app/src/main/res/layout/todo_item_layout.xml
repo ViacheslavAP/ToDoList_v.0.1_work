@@ -4,8 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-<variable
-    name="todo" type="ru.perelyginva.todolist_v01.model.Todo" />
+
+        <variable
+            name="todo"
+            type="ru.perelyginva.todolist_v01.model.Todo" />
+
+        <variable
+            name="listener"
+            type="ru.perelyginva.todolist_v01.view.TodoCheckChangeListener" />
+
+        <variable
+            name="editListener"
+            type="ru.perelyginva.todolist_v01.view.TodoEditClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,6 +29,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:text="@{todo.title}"
+            android:onCheckedChanged="@{(cb, isChecked) -> listener.onTodoCheckChange(cb, isChecked, todo)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -30,9 +41,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_edit_24"
+            android:tag="@{todo.uuid}"
+            android:onClick="@{editListener::onTodoEditClick}"
+            app:layout_constraintBottom_toBottomOf="@id/checkTask"
             app:layout_constraintEnd_toEndOf="@id/checkTask"
-            app:layout_constraintTop_toTopOf="@id/checkTask"
-            app:layout_constraintBottom_toBottomOf="@id/checkTask">
+            app:layout_constraintTop_toTopOf="@id/checkTask">
 
         </ImageView>
 
