@@ -3,6 +3,8 @@ package ru.perelyginva.todolist_v01.model
 import androidx.room.*
 
 
+
+//TODO("создается две таблицы!! исправить")
 @Dao
 interface TodoDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)

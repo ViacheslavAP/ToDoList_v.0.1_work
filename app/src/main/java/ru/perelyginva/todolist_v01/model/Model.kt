@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "todo_table")  //что такое?
+@Entity(tableName = "todo_table")
 data class Todo(
     @ColumnInfo(name = "title")
     var title: String,
