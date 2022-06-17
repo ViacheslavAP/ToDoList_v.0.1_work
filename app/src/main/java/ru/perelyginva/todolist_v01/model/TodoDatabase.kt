@@ -7,7 +7,8 @@ import androidx.room.RoomDatabase
 import ru.perelyginva.todolist_v01.util.MIGRATION_1_2
 import ru.perelyginva.todolist_v01.util.MIGRATION_2_3
 
-@Database(entities = arrayOf(Todo::class), version = 3)
+//TODO("измени версию базы, если что то добавил.You need сhange number db when add new element")
+@Database(entities = arrayOf(Todo::class), version = 4)
 
 abstract class TodoDatabase : RoomDatabase() {
     abstract fun todoDao(): TodoDao

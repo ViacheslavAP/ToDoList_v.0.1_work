@@ -67,6 +67,7 @@ class EditToDoFragment : Fragment(), RadioButtonClickListener, TodoSaveChangesLi
     }
 
     override fun onRadioButtonClick(view: View, objectRadio: Todo) {
+        //TODO("выкидывает сюда с ошибкой!!! For input string: "false"")
         objectRadio.priority = view.tag.toString().toInt()
     }
 
