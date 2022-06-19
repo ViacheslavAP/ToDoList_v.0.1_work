@@ -16,4 +16,12 @@
     <string name="check_box">Check Box</string>
     <string name="edit_to_do">Edit To Do</string>
     <string name="save_changes">save changes</string>
+
+    <!-- add words  -->
+    <string name="note">Note</string>
+    <string name="calendar">Calendar</string>
+    <string name="setting">Setting</string>
+    <string name="search">Search</string>
+    <string name="list">List</string>
+
 </resources>
