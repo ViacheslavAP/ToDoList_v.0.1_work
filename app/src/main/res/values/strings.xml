@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">To Do List_v.0.1</string>
+    <string name="app_name" translatable="false">To Do List_v.0.1</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="to_do_empty">Your To Do list is Empty. Create new</string>
     <string name="new_to_do">New To Do</string>
@@ -23,5 +23,6 @@
     <string name="setting">Setting</string>
     <string name="search">Search</string>
     <string name="list">List</string>
+    <string name="a_new_todo">A new todo has been created! Stay focus!</string>
 
 </resources>

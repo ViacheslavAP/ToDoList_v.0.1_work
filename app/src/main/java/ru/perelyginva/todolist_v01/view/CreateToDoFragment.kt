@@ -11,6 +11,7 @@ import androidx.navigation.Navigation
 import ru.perelyginva.todolist_v01.R
 import ru.perelyginva.todolist_v01.databinding.FragmentCreateToDoBinding
 import ru.perelyginva.todolist_v01.model.Todo
+import ru.perelyginva.todolist_v01.util.NotificationHelper
 import ru.perelyginva.todolist_v01.viewmodel.DetailTodoViewModel
 
 
@@ -34,6 +35,9 @@ class CreateToDoFragment : Fragment() {
 
 
         createToDoBinding.btnAdd.setOnClickListener {
+            //запускаем всплыввающие уведомления
+            NotificationHelper(view.context).createNotification(
+                "Todo created", "A new todo has been created!")
             val radioGroup = createToDoBinding.radioGroupPriorety.checkedRadioButtonId //создаем радиГруппу кнопок
             val todo = Todo(
                 createToDoBinding.tvTitle.text.toString(),

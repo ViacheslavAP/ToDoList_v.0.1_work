@@ -22,4 +22,5 @@
     <string name="setting">Настройки</string>
     <string name="search">Поиск</string>
     <string name="list">Список</string>
+    <string name="a_new_todo">A new todo has been created! Stay focus!</string>
 </resources>
