@@ -6,12 +6,10 @@
     <data>
 
         <variable
-
             name="todo"
             type="ru.perelyginva.todolist_v01.model.Todo" />
 
         <variable
-
             name="radiolistener"
             type="ru.perelyginva.todolist_v01.view.RadioButtonClickListener" />
 

@@ -9,7 +9,7 @@ import ru.perelyginva.todolist_v01.R
 import ru.perelyginva.todolist_v01.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {

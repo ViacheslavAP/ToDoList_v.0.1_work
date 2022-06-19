@@ -19,18 +19,18 @@ class ToDoListFragment : Fragment() {
     private lateinit var viewModel: ListTodoViewModel
 
     private var todoListAdapterNew: TodoListAdapter = TodoListAdapter(
-        arrayListOf(),
-        { item -> doClick(item) })
+        arrayListOf()
+    ) { item -> doClick(item) }
     private lateinit var toDoListBinding: FragmentToDoListBinding
 
-    fun doClick(item: Any) {
+    private fun doClick(item: Any) {
         viewModel.clearTask(item as Todo)
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         toDoListBinding = FragmentToDoListBinding.inflate(layoutInflater, container, false)
         return toDoListBinding.root
     }

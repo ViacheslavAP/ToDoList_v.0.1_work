@@ -4,11 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import ru.perelyginva.todolist_v01.util.MIGRATION_1_2
-import ru.perelyginva.todolist_v01.util.MIGRATION_2_3
+
 
 //TODO("измени версию базы, если что то добавил.You need сhange number db when add new element")
-@Database(entities = arrayOf(Todo::class), version = 4)
+@Database(entities = [Todo::class], version = 1)
 
 abstract class TodoDatabase : RoomDatabase() {
     abstract fun todoDao(): TodoDao
@@ -23,7 +22,7 @@ abstract class TodoDatabase : RoomDatabase() {
                 context.applicationContext,
                 TodoDatabase::class.java,
                 "tododb")
-                .addMigrations(MIGRATION_1_2, MIGRATION_2_3) //переход на новую ДБ
+               //.addMigrations(MIGRATION_1_2, MIGRATION_2_3) //переход на новую ДБ
                 .build()
 
         operator fun invoke(context: Context) =
