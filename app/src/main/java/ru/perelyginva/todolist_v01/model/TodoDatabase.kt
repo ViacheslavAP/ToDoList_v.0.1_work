@@ -18,12 +18,15 @@ abstract class TodoDatabase : RoomDatabase() {
         private val LOCK = Any()
 
         private fun buildDatabase(context: Context) =
-            Room.databaseBuilder(
-                context.applicationContext,
-                TodoDatabase::class.java,
-                "tododb")
-               //.addMigrations(MIGRATION_1_2, MIGRATION_2_3) //переход на новую ДБ
-                .build()
+            if (instance == null){
+                Room.databaseBuilder(
+                    context.applicationContext,
+                    TodoDatabase::class.java,
+                    "tododb")
+                    //.addMigrations(MIGRATION_1_2, MIGRATION_2_3) //переход на новую ДБ
+                    .build()
+                instance as TodoDatabase
+            } else instance as TodoDatabase
 
         operator fun invoke(context: Context) =
             instance ?: synchronized(LOCK) {
